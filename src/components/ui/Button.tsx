@@ -31,11 +31,11 @@ export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement>, Va
 export default function Button ({ className, children, variant, isLoading, size, ...props }: ButtonProps): JSX.Element {
     return (
         <button 
-            className={cn(buttonVariants({ variant, size, className }))}
-            disabled={isLoading}
-            {...props}>
-                {isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}
-                {children}
+        className={cn(buttonVariants({ variant, size, className }))}
+        disabled={isLoading}
+        {...props}>
+            {isLoading ? <Loader2 className="mr-2 h-4 w-4 animate-spin" /> : null}
+            {children}
         </button>
     );
 }
